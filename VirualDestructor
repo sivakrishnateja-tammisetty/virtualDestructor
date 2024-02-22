@@ -1,0 +1,67 @@
+*Virtual Destructor is a destructor declared with vitual keyword in base class.A virtual destructor is used to ensure proper destruction of objects when  they are deleted through pointer of a base class.
+
+
+Eg:
+#include<iostream>
+using namespace std;
+class Base
+{
+  public:
+  Base(){cout<<"Base constructor"<<endl;}
+   ~Base(){cout<<"Base Destructor"<<endl;}
+};
+class Derived:public Base{
+  public:
+  Derived(){cout<<"Derived constructor"<<endl;}
+  ~Derived(){cout<<"Derived Destructor"<<endl;}
+};
+int main()
+{
+  Base *ptr=new Derived;
+ delete ptr;
+  
+  return 0;
+}
+
+o/p:
+Base constructor
+Derived constructor
+Base Destructor
+
+
+
+
+
+
+
+
+
+Eg: virtual desturctor
+
+
+#include<iostream>
+using namespace std;
+class Base
+{
+  public:
+  Base(){cout<<"Base constructor"<<endl;}
+  virtual ~Base(){cout<<"Base Destructor"<<endl;}
+};
+class Derived:public Base{
+  public:
+  Derived(){cout<<"Derived constructor"<<endl;}
+  ~Derived(){cout<<"Derived Destructor"<<endl;}
+};
+int main()
+{
+  Base *ptr=new Derived;
+ delete ptr;
+  
+  return 0;
+}
+
+o/p:
+Base constructor
+Derived constructor
+Derived Destructor
+Base Destructor
