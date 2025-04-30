@@ -65,3 +65,24 @@ Base constructor
 Derived constructor
 Derived Destructor
 Base Destructor
+
+
+--------------------------------------------------------
+2. Can a Destructor be called explicitly in c++?
+
+Yes, in c++ you can call explicitly call a destructor.
+
+Eg:
+#include<iostream>
+using namespace std;
+class Demo{
+public:
+Demo(){cout<<"cnstr"<<endl;
+~Demo(){cout<<"dstr"<<endl;}
+};
+int main()
+{
+Demo obj;
+obj.~Demo();//Explicit dstr call;
+cout<<"End prgm"<<endl;
+}
