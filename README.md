@@ -1,2 +1,2 @@
-Virtual destructor
-can we call destructor explicitly in c++
+Virtual destructor?
+can we call destructor explicitly in c++?
